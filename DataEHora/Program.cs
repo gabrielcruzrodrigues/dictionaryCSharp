@@ -1,6 +1,5 @@
 ﻿/* O tipo Struct é semelhante a uma classe, mas é composto por outros tipos e métodos.
- * DateT
-//addime é o tipo usado para referenciar datas e horas no C#.
+ * DataTime é o tipo usado para referenciar datas e horas no C#.
  * O DateTime tem o valor padrão de 01/01/0001 00:00:00 - (dd/mm/aaaa hh:mm:ss).
  */
 
