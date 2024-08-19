@@ -1,4 +1,6 @@
-﻿//-128 a 127
+﻿//O valor padrão de todos os tipos numéricos do C# é 0.
+
+//-128 a 127
 sbyte n3 = -1;
 
 //0 a 127
