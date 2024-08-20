@@ -10,19 +10,25 @@ internal class Program
         Console.WriteLine("========================================");
         Car car = new Car(1, "Fiesta!");
         car.ToString();
-
-        Console.ReadKey();
+;
 
         //passagem de argumento por valor
         int n1 = 0;
+        string s1 = "Fiesta";
         car.SpeakNumber(n1);
+
+        //passagem de argumento por referência
+        car.addStringToModel(ref s1);
+        Console.WriteLine(s1);
+
+        Console.ReadKey();
     }
 }
 
 class Car
 {
-    public int id;
-    public string? model;
+    public int id {  get; set; }
+    public string? model {  get; set; }
        
     public Car(int id, string? model)
     {
@@ -38,5 +44,10 @@ class Car
     public void SpeakNumber(int number)
     {
         Console.WriteLine(number);
+    }
+
+    public void addStringToModel(ref string str)
+    {
+        str = "outra coisa";
     }
 }
