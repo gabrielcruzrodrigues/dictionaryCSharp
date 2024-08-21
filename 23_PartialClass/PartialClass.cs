@@ -11,6 +11,6 @@ namespace _23_PartialClass
     public partial class PartialClass
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }
