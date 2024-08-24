@@ -55,6 +55,9 @@ delegateAction(y, z);
 //-------------------- Delegate Fun --------------------
 /* Recebe de um até 16 argumentos do tipo T de entrada e retorna um valor do tipo TResult.
  */
+int c = 6;
+Func<double, double> delegateFunction = (x => Console.WriteLine(Math.Sqrt(x)));
+delegateFunction(c);
 
 Console.ReadKey();
 
