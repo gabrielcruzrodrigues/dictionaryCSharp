@@ -23,7 +23,7 @@
  * inicializadores de objeto e coleção
  */
 
-List<string> names = ["Gabriel", "Nathan", "Pedro", "Júlia"];
+List<string> names = ["Gabriel", "Nathan", "Pedro", "Júlia", "Guiberto"];
 
 //IEnumerable
 var result = from m in names           //Query sintax
@@ -31,7 +31,12 @@ var result = from m in names           //Query sintax
              select m;
 
 //List<T>
-var result2 = names.Where(m => m.Contains('P')).ToList();  //Method syntax
+var result2 = names.Where(m => m.Contains('G')) //Method synta
+               .Select(m => new
+               {
+                   Name = m
+               })
+               .OrderBy(m => m.Name);
 
 foreach(var item in result)
 {
@@ -40,7 +45,7 @@ foreach(var item in result)
 
 foreach (var item in result2)
 {
-    Console.WriteLine(item);
+    Console.WriteLine(item.Name);
 }
 
 Console.ReadKey();
